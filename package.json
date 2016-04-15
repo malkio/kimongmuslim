@@ -1,6 +1,6 @@
 {
-  "name": "HTML5 BOILERPLATE Lite",
-  "version": "0.0.1",
+  "name": "html5-boilerplate-template",
+  "version": "0.0.2",
   "description": "Project with grunt with live reload, html,js hinting, sass build",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "website"
   ],
   "author": "coding.malkio <coding.malkio@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^1.0.0",
