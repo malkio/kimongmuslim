@@ -22,5 +22,8 @@
     "grunt-express": "^1.4.1",
     "grunt-htmlhint": "^0.9.12-fix",
     "grunt-open": "^0.2.3"
+  },
+  "dependencies": {
+    "grunt-contrib-copy": "^1.0.0"
   }
 }

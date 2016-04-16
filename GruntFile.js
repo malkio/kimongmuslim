@@ -93,8 +93,13 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-htmlhint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	// set default task(s)
-
+	grunt.registerTask('build', [
+		'htmlhint',
+		'jshint',
+		'sass:dist'
+		]);
 	grunt.registerTask('server', [
 		'express',
 		'open',
