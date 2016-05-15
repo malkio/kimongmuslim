@@ -100,6 +100,11 @@ module.exports = function(grunt){
 		'jshint',
 		'sass:dist'
 		]);
+	grunt.registerTask('build:release', [
+		'build',
+		'copy:release',
+		'copy:releaseimages'
+		]);
 	grunt.registerTask('server', [
 		'express',
 		'open',
