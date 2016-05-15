@@ -81,6 +81,43 @@ module.exports = function(grunt){
 				},
 				src: [globalconfig.htmlpath]
 			}
+		},
+		// Release
+		copy: {
+			components: {
+				files:	[
+					{ expand: true, cwd: 'app/assets/components/slick-carousel/slick/fonts', src: '**', dest: 'app/assets/fonts/' }
+				]
+			},
+			release: {
+				options: {
+				    	process: function (content, srcpath) {
+				        	return content.replace(/href=".\/assets/g, "href=\".").replace( /src=".\/assets/g, "src=\".");
+				    	}
+
+				},
+				files: [
+					// COPY STYLESHEETS
+      				{ expand: true, cwd: 'app/assets/styles/', src: '**', dest: 'release/styles/' },
+     				// COPY HTML
+      				{
+      					expand: true,
+      					cwd: 'app/',
+      					src: '*.html',
+      					dest: 'release/',
+      				},
+      				// COPY JS
+      				{ expand: true, cwd: 'app/assets/js/', src: '**', 'dest': 'release/js/'},
+      				// COPY FONT /IMAGES / COMPONENTS
+      				{ expand: true, cwd: 'app/assets/', src: ['components/**', 'fonts/**'], dest: 'release/'}
+				]
+			},
+			releaseimages: {
+				files: [
+					{ expand: true, cwd: 'app/assets/images/', src: '**', 'dest': 'release/images/'},
+				]
+			}
+
 		}
 	});
 
