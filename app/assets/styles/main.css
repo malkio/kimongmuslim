@@ -237,6 +237,33 @@ textarea {
 section {
   min-height: 100vh;
   margin: 0;
-  padding: 0; }
+  padding: 8px 0; }
+
+.work-item {
+  padding: 0;
+  position: relative; }
+  .work-item:hover .overlay {
+    visibility: visible; }
+  .work-item .overlay {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease; }
+    .work-item .overlay i {
+      padding-top: 15px;
+      font-size: 2.5em; }
+    .work-item .overlay:hover {
+      background-color: rgba(0, 0, 0, 0.9); }
+  .work-item img {
+    width: 100%;
+    height: 100%; }
 
 /*# sourceMappingURL=main.css.map */
