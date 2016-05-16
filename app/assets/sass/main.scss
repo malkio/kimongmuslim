@@ -272,3 +272,40 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.section-bar {
+	background-color:#c0c0c0;
+	margin-bottom: 8px;
+		.section-title {
+			line-height: 1;
+			padding: 8px;
+			height:50px;
+			width:30%;
+			min-width:200px;
+			border-right: 10px solid darkred;
+			background-color: red;
+			.title {
+				height: 100%;
+				padding-left:10px;
+				border-left: #fff;
+				color: #fff;
+				border-left: 10px solid #fff;
+				font-weight:bolder;
+				small {
+					font-size: .7em;
+				}
+			}
+		}
+}
+
+
+section {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
