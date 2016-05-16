@@ -1,7 +1,8 @@
-DS_store
+.DS_store
 node_modules
 bower_components
 .tmp
 .sass-cache
 style.css.map
 release
+.map
