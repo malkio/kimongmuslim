@@ -160,5 +160,25 @@
 				]
 			}
 		]
+	},
+	"background": {
+		"categories": [
+			{
+				"name" :"frontend",
+				"list": [
+					"coffeescript",
+					"babel",
+					"jquery"
+				]
+			},
+			{
+				"name" :"backend",
+				"list": [
+					"php",
+					"phalcon",
+					"codeigniter"
+				]
+			}
+		]
 	}
 }

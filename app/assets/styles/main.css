@@ -239,6 +239,9 @@ section {
   margin: 0;
   padding: 8px 0; }
 
+#background span {
+  margin: 0 5px; }
+
 .work-item {
   padding: 0;
   position: relative; }

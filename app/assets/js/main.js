@@ -32,10 +32,12 @@
 	// 	<div class="col-sm-6 col-xs-12 col-md-3">
 	//
 	// 	</div>
+
+
 	function buildWorkThumbnail(work){
 		var workThumbnail = "<div class='col-sm-6 col-xs-12 col-md-3 work-item'>";
-		workThumbnail += "<a href='"+work.url+"'>";
-		workThumbnail += "<img src='"+imageLocation + work.img+"' alt=''>";
+		workThumbnail +=  "<a href='"+work.url+"'>";
+		workThumbnail +=  	"<img src='"+imageLocation + work.img+"' alt=''>";
 		workThumbnail += 	"<div class='overlay'>";
 		workThumbnail +=		"<h4>"+work.title+"</h4>";
 		workThumbnail += 		"<i class='glyphicon glyphicon-link'></i>";
@@ -45,6 +47,8 @@
 		return workThumbnail;
 	}
 	function initialize(data){
+
+		// BUILD WORK
 		var workData = data.works;
 		var $works = $("#works");
 
@@ -56,7 +60,19 @@
 				$categories.append(_workThumbnail);
 			});
 			$works.find('.container').append($categories);
+		});
 
+		// BUILD BACKGROUND
+		var backgroundData = data.background;
+		var $background = $("#background");
+		$.each(backgroundData.categories, function(catIndex, category){
+			var $categories = $("<div class='row'><div class='col-sm-4'><h4>"+category.name+"</h4></div><div class='col-sm-8 background-list'></div></div>");
+
+			$.each(category.list, function(backgroundIndex, background){
+				var backgroundSpan = "<span class='label label-primary'>"+background+"</span>";
+				$categories.find('.background-list').append(backgroundSpan);
+			});
+			$background.find('.container').append($categories);
 		});
 	}
 }(jQuery, window, document, undefined));
