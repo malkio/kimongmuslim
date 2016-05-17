@@ -215,7 +215,7 @@ textarea {
 
 .section-bar {
   background-color: #c0c0c0;
-  margin-bottom: 16px; }
+  margin-bottom: 2px; }
   .section-bar .section-title {
     line-height: 1;
     padding: 8px;
@@ -237,7 +237,7 @@ textarea {
 section {
   min-height: 100vh;
   margin: 0;
-  padding: 8px 0; }
+  padding: 8px 0 5% 0; }
   section .container > .row {
     position: relative; }
 
@@ -313,5 +313,26 @@ iframe {
     margin-left: 0;
     width: 100%;
     z-index: 99; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .fullheight {
+    height: 768px; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .fullheight {
+    height: 1024px; } }
+/* iphone5 */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .fullheight {
+    height: 320px; } }
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  .fullheight {
+    height: 568px; } }
+/* iPhone 4 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .fullheight {
+    height: 320px; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .fullheight {
+    height: 480px; } }
 
 /*# sourceMappingURL=main.css.map */

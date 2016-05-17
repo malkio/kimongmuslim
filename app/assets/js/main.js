@@ -54,7 +54,9 @@
 
 		$.each(workData.categories, function(catIndex, category){
 			var $categories = $("<div class='row'></div>");
-			$categories.append("<a href='#' class='btn-work-next'><i class='glyphicon glyphicon-chevron-right'></i></a>");
+
+			// Add next button
+			//$categories.append("<a href='#' class='btn-work-next'><i class='glyphicon glyphicon-chevron-right'></i></a>");
 			$.each(category.list, function(workIndex, work){
 				if(workIndex > 3) return false;
 				var _workThumbnail = buildWorkThumbnail(work);
