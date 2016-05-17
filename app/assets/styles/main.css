@@ -223,6 +223,7 @@ textarea {
     width: 30%;
     min-width: 200px;
     border-right: 10px solid darkred;
+    display: inline-block;
     background-color: red; }
     .section-bar .section-title .title {
       height: 100%;
@@ -241,8 +242,28 @@ section {
   section .container > .row {
     position: relative; }
 
-#background span {
+#simple-background span {
   margin: 0 5px; }
+
+#coggle-background {
+  position: relative; }
+  #coggle-background .container {
+    position: relative; }
+  #coggle-background .section-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    z-index: 99; }
+
+iframe {
+  height: 100vh;
+  width: 100%;
+  z-index: 5; }
+
+.btn-toggle-coggle {
+  height: 50px; }
 
 .btn-work-next {
   position: absolute;
@@ -296,23 +317,6 @@ section {
   .work-item img {
     width: 100%;
     height: 100%; }
-
-iframe {
-  height: 100vh;
-  width: 100%;
-  z-index: 5; }
-
-#test-background {
-  position: relative; }
-  #test-background .container {
-    position: relative; }
-  #test-background .section-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 0;
-    width: 100%;
-    z-index: 99; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .fullheight {

@@ -13,6 +13,20 @@
 	});
 
 
+		function toggleCoggle(){
+			$(".btn-toggle-coggle").on('click', function(e){
+				e.preventDefault();
+				if( $('#coggle-background').hasClass('hidden') ) {
+					$("#coggle-background").removeClass('hidden');
+					$('#simple-background').addClass('hidden');
+				}
+				else {
+					$("#coggle-background").addClass('hidden');
+					$('#simple-background').removeClass('hidden');
+				}
+			});
+		}
+		toggleCoggle();
 	// var $works = $("#works");
 	// var $categories = $("<div class='row no-gutter'></div>");
 	// var $work = $("<div class='col-sm-6 col-xs-12 col-md-3'></div>");
@@ -67,7 +81,7 @@
 
 		// BUILD BACKGROUND
 		var backgroundData = data.background;
-		var $background = $("#background");
+		var $background = $("#simple-background");
 		$.each(backgroundData.categories, function(catIndex, category){
 			var $categories = $("<div class='row'><div class='col-sm-4'><h4>"+category.name+"</h4></div><div class='col-sm-8 background-list'></div></div>");
 

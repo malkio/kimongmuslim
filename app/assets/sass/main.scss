@@ -288,6 +288,7 @@ textarea {
 		width:30%;
 		min-width:200px;
 		border-right: 10px solid darkred;
+		display:inline-block;
 		background-color: red;
 		.title {
 			height: 100%;
@@ -314,11 +315,35 @@ section {
 }
 
 
-#background {
+#simple-background {
 	span {
 		margin: 0 5px;
 	}
 }
+
+
+#coggle-background {
+	position:relative;
+	.container { position: relative; }
+	.section-bar{
+		position: absolute;
+		top: 0;
+		left:0;
+		margin-left: 0;
+		width:100%;
+		z-index: 99;
+	}
+}
+
+iframe {
+	height: 100vh;
+	width: 100%;
+	z-index: 5;
+}
+.btn-toggle-coggle {
+	height: 50px;
+}
+
 .btn-work-next {
 	position:absolute;
 	height:100%;
@@ -380,25 +405,6 @@ section {
 	img{
 		width:100%;
 		height:100%;
-	}
-}
-
-iframe {
-	height: 100vh;
-	width: 100%;
-	z-index: 5;
-}
-
-#test-background {
-	position:relative;
-	.container { position: relative; }
-	.section-bar{
-		position: absolute;
-		top: 0;
-		left:0;
-		margin-left: 0;
-		width:100%;
-		z-index: 99;
 	}
 }
 
