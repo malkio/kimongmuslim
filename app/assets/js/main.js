@@ -35,7 +35,7 @@
 
 
 	function buildWorkThumbnail(work){
-		var workThumbnail = "<div class='col-sm-6 col-xs-12 col-md-3 work-item'>";
+		var workThumbnail = "<div class='col-sm-6 col-xs-6 col-md-3 work-item'>";
 		workThumbnail +=  "<a href='"+work.url+"'>";
 		workThumbnail +=  	"<img src='"+imageLocation + work.img+"' alt=''>";
 		workThumbnail += 	"<div class='overlay'>";
@@ -54,6 +54,7 @@
 
 		$.each(workData.categories, function(catIndex, category){
 			var $categories = $("<div class='row'></div>");
+			$categories.append("<a href='#' class='btn-work-next'><i class='glyphicon glyphicon-chevron-right'></i></a>");
 			$.each(category.list, function(workIndex, work){
 				if(workIndex > 3) return false;
 				var _workThumbnail = buildWorkThumbnail(work);
