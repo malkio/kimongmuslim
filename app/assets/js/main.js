@@ -48,12 +48,25 @@
 	// 	</div>
 
 
-	function buildWorkThumbnail(work){
+	function buildThumbnail(data, isHeader){
+		if(isHeader){
+			var workThumbnailHeader = "<div class='col-sm-6 col-xs-6 col-md-3 work-header'>";
+			workThumbnailHeader +=  "<a href='"+data.url+"'>";
+			workThumbnailHeader +=  	"<img src='"+imageLocation + data.img+"' alt=''>";
+			workThumbnailHeader += 	"<div class='overlay'>";
+			workThumbnailHeader +=		"<h3>"+data.name+"</h3>";
+			workThumbnailHeader +=	"</div>";
+			workThumbnailHeader += "</a>";
+			workThumbnail += "</div>";
+			return workThumbnailHeader;
+		}
+
 		var workThumbnail = "<div class='col-sm-6 col-xs-6 col-md-3 work-item'>";
-		workThumbnail +=  "<a href='"+work.url+"'>";
-		workThumbnail +=  	"<img src='"+imageLocation + work.img+"' alt=''>";
+		workThumbnail +=  "<a href='"+data.url+"'>";
+		workThumbnail +=  	"<img src='"+imageLocation + data.img+"' alt=''>";
 		workThumbnail += 	"<div class='overlay'>";
-		workThumbnail +=		"<h4>"+work.title+"</h4>";
+		workThumbnail +=		"<h4>"+data.title+"</h4>";
+		workThumbnail +=		"<small>"+data.description+"</small>";
 		workThumbnail += 		"<i class='glyphicon glyphicon-link'></i>";
 		workThumbnail +=	"</div>";
 		workThumbnail += "</a>";
@@ -67,16 +80,16 @@
 		var $works = $("#works");
 
 		$.each(workData.categories, function(catIndex, category){
-			var $categories = $("<div class='row'></div>");
-
+			var $workList = $("<div class='row work-list'></div>");
 			// Add next button
-			//$categories.append("<a href='#' class='btn-work-next'><i class='glyphicon glyphicon-chevron-right'></i></a>");
+			//$work-list.append("<a href='#' class='btn-work-next'><i class='glyphicon glyphicon-chevron-right'></i></a>");
 			$.each(category.list, function(workIndex, work){
-				if(workIndex > 3) return false;
-				var _workThumbnail = buildWorkThumbnail(work);
-				$categories.append(_workThumbnail);
+				if(workIndex > 2) return false;
+				var _workThumbnail = buildThumbnail(work);
+				$workList.append(_workThumbnail);
 			});
-			$works.find('.container').append($categories);
+			$workList.prepend( buildThumbnail(category, true) );
+			$works.find('.container').append($workList);
 		});
 
 		// BUILD BACKGROUND

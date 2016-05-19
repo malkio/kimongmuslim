@@ -4,6 +4,8 @@
 		"categories":[
 			{
 				"name":"Frontend",
+				"img": "portfolio_01.jpg",
+				"url": "http://localhost:9000/here",
 				"list":[
 					{
 						"title":"Lusty Leopard",
@@ -45,6 +47,8 @@
 			},
 			{
 				"name":"Backend",
+				"img": "portfolio_01.jpg",
+				"url": "http://localhost:9000",
 				"list":[
 					{
 						"title":"Lusty Leopard",
@@ -74,6 +78,8 @@
 			},
 			{
 				"name":"Mobile",
+				"img": "portfolio_01.jpg",
+				"url": "http://localhost:9000",
 				"list":[
 					{
 						"title":"Lusty Leopard",
@@ -103,6 +109,8 @@
 			},
 			{
 				"name":"Embed",
+				"img": "portfolio_01.jpg",
+				"url": "http://localhost:9000",
 				"list":[
 					{
 						"title":"Lusty Leopard",
@@ -132,6 +140,8 @@
 			},
 			{
 				"name":"Embed",
+				"img": "portfolio_01.jpg",
+				"url": "http://localhost:9000",
 				"list":[
 					{
 						"title":"Lusty Leopard",

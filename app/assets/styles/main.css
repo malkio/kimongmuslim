@@ -245,7 +245,7 @@ http://www.sanbeiji.com/archives/953 */
   padding-left: 0; }
 
 .section-bar {
-  background-color: #c0c0c0;
+  background-color: #fafafa;
   margin-bottom: 2px; }
   .section-bar .section-title {
     line-height: 1;
@@ -273,8 +273,46 @@ section {
   section .container > .row {
     position: relative; }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease; }
+
 #works {
   padding-top: 70px; }
+  #works img {
+    width: 100%;
+    height: 100%; }
+  #works .work-header, #works .work-item {
+    padding: 0;
+    position: relative; }
+  #works .work-header:hover .overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: red; }
+  #works .work-header .overlay {
+    text-align: center;
+    color: red;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-right: 5px solid darkred; }
+  #works .work-item:hover .overlay {
+    color: red;
+    background-color: rgba(255, 255, 255, 0.95); }
+    #works .work-item:hover .overlay small {
+      color: #e60000; }
+  #works .work-item .overlay {
+    text-align: center;
+    color: transparent;
+    background-color: rgba(255, 255, 255, 0.2); }
+    #works .work-item .overlay i {
+      display: block;
+      padding-top: 15px;
+      font-size: 2.2em; }
 
 #simple-background span {
   margin: 0 5px; }
@@ -324,31 +362,6 @@ iframe {
     transform: translateY(-45%);
     padding: 8px;
     background-color: #c0c0c0; }
-
-.work-item {
-  padding: 0;
-  position: relative; }
-  .work-item:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.2); }
-  .work-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.8);
-    -webkit-transition: background-color 0.5s ease;
-    -o-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease; }
-    .work-item .overlay i {
-      padding-top: 15px;
-      font-size: 2.5em; }
-  .work-item img {
-    width: 100%;
-    height: 100%; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .fullheight {
