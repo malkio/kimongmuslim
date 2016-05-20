@@ -7,45 +7,27 @@
 		cache: false,
 		success: function(data){
 			if(typeof data === 'object')
-				initialize(data);
+			initialize(data);
 
 		}
 	});
 
 
-		function toggleCoggle(){
-			$(".btn-toggle-coggle").on('click', function(e){
-				e.preventDefault();
-				if( $('#coggle-background').hasClass('hidden') ) {
-					$("#coggle-background").removeClass('hidden');
-					$('#simple-background').addClass('hidden');
-				}
-				else {
-					$("#coggle-background").addClass('hidden');
-					$('#simple-background').removeClass('hidden');
-				}
-			});
-		}
-		toggleCoggle();
-	// var $works = $("#works");
-	// var $categories = $("<div class='row no-gutter'></div>");
-	// var $work = $("<div class='col-sm-6 col-xs-12 col-md-3'></div>");
-	//
-	// 	<div class="col-sm-6 col-xs-12 col-md-3">
-	// 		<div class="he-wrap tpl6">
-	// 			<img src="./assets/img/portfolio/portfolio_08.jpg" alt="">
-	// 			<div class="he-view">
-	// 				<div class="bg a0" data-animate="fadeIn">
-	// 					<h6 class="project-title" data-animate="fadeInDown">A Graphic Design Item</h6>
-	// 					<a data-rel="prettyPhoto" href="./assets/img/portfolio/portfolio_08.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-	// 					<a href="single-project.html" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-	// 				</div><!-- he bg -->
-	// 			</div><!-- he view -->
-	// 		</div><!-- he wrap -->
-	// 	</div>
-	// 	<div class="col-sm-6 col-xs-12 col-md-3">
-	//
-	// 	</div>
+	function toggleCoggle(){
+		$(".btn-toggle-coggle").on('click', function(e){
+			e.preventDefault();
+			if( $('#coggle-background').hasClass('hidden') ) {
+				$("#coggle-background").removeClass('hidden');
+				$('#simple-background').addClass('hidden');
+			}
+			else {
+				$("#coggle-background").addClass('hidden');
+				$('#simple-background').removeClass('hidden');
+			}
+		});
+	}
+	toggleCoggle();
+
 
 
 	function buildThumbnail(data, isHeader){
@@ -106,3 +88,6 @@
 		});
 	}
 }(jQuery, window, document, undefined));
+
+
+ 

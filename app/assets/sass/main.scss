@@ -15,7 +15,9 @@ html {
 	font-size: 1em;
 	line-height: 1.4;
 }
-
+p, small, span {
+	font-family: 'Arial';
+}
 /*
 * Remove text-shadow in selection highlight:
 * https://twitter.com/miketaylr/status/12228805301
@@ -378,9 +380,6 @@ http://www.phpied.com/delay-loading-your-print-css/
 	}
 }
 
-small {
-	font-family: 'Arial, Helvetica, sans-serif';
-}
 section {
 	min-height: 100vh;
 	margin: 0;
@@ -407,6 +406,12 @@ section {
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'edge';
 }
+a {
+	color: #384452;
+	&:hover {
+		color: lighten(#384452,20%);
+	}
+}
 #works {
 	padding-top: 70px;
 
@@ -430,7 +435,7 @@ h1,h2,h3,h4,h5,h6 {
 		}
 		.overlay {
 			text-align: center;
-			color: red;
+			color: lighten(#384452, 5%);
 			background-color: rgba(#fff, 0.90);
 			border-right: 4px solid darken(#fff, 15%);
 		}
@@ -494,14 +499,15 @@ h1,h2,h3,h4,h5,h6 {
 		background-color: #fff;
 		text-align: center;
 		h3{ font-family: 'Arial'; }
-		img { margin: 0 auto; padding: 0 20px;}
+		img { margin: 0 auto; padding: 0 10%; max-height: 300px; }
 	}
 	.info {
 		height:80vh;
-		font-size: 1.5em;
+		font-size: 1.3em;
 		padding: 5% 10px 10px 10px;
 		line-height:2.2em;
 		p {
+			padding: 0 10px;
 			text-align: justify;
 			margin: 0 auto;
 			max-width: 550px;
@@ -519,7 +525,14 @@ iframe {
 	height: 50px;
 }
 
-
+footer{
+	padding: 60px 0;
+	background-color: lighten(#384452, 20%);
+	color: #fff;
+}
+span.label-default {
+	background-color: lighten(#384452, 20%);
+}
 // old devices
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 	.fullheight {

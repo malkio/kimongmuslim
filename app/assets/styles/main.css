@@ -13,6 +13,9 @@ html {
   font-size: 1em;
   line-height: 1.4; }
 
+p, small, span {
+  font-family: 'Arial'; }
+
 /*
 * Remove text-shadow in selection highlight:
 * https://twitter.com/miketaylr/status/12228805301
@@ -284,9 +287,6 @@ http://www.sanbeiji.com/archives/953 */
       .section-bar .section-title .title small {
         font-size: .7em; }
 
-small {
-  font-family: 'Arial, Helvetica, sans-serif'; }
-
 section {
   min-height: 100vh;
   margin: 0;
@@ -310,6 +310,11 @@ section {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'edge'; }
 
+a {
+  color: #384452; }
+  a:hover {
+    color: #61768f; }
+
 #works {
   padding-top: 70px; }
   #works img {
@@ -326,7 +331,7 @@ h1, h2, h3, h4, h5, h6 {
     border-color: red; }
   #works .work-header .overlay {
     text-align: center;
-    color: red;
+    color: #425161;
     background-color: rgba(255, 255, 255, 0.9);
     border-right: 4px solid #d9d9d9; }
   #works .work-item:hover .overlay {
@@ -378,13 +383,15 @@ h1, h2, h3, h4, h5, h6 {
       font-family: 'Arial'; }
     #contact-me .details img {
       margin: 0 auto;
-      padding: 0 20px; }
+      padding: 0 10%;
+      max-height: 300px; }
   #contact-me .info {
     height: 80vh;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 5% 10px 10px 10px;
     line-height: 2.2em; }
     #contact-me .info p {
+      padding: 0 10px;
       text-align: justify;
       margin: 0 auto;
       max-width: 550px; }
@@ -396,6 +403,14 @@ iframe {
 
 .btn-toggle-coggle {
   height: 50px; }
+
+footer {
+  padding: 60px 0;
+  background-color: #61768f;
+  color: #fff; }
+
+span.label-default {
+  background-color: #61768f; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .fullheight {
