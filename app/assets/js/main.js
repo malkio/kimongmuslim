@@ -65,7 +65,7 @@
 		workThumbnail +=  "<a href='"+data.url+"'>";
 		workThumbnail +=  	"<img src='"+imageLocation + data.img+"' alt=''>";
 		workThumbnail += 	"<div class='overlay'>";
-		workThumbnail +=		"<h4>"+data.title+"</h4>";
+		workThumbnail +=		"<h5>"+data.title+"</h5>";
 		workThumbnail +=		"<small>"+data.description+"</small>";
 		workThumbnail += 		"<i class='glyphicon glyphicon-link'></i>";
 		workThumbnail +=	"</div>";
