@@ -345,6 +345,8 @@ h1, h2, h3, h4, h5, h6 {
 #simple-background span {
   margin: 2px 4px;
   display: inline-block; }
+#simple-background .row {
+  margin-bottom: 40px; }
 
 #coggle-background {
   position: relative; }
@@ -363,7 +365,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fafafa;
   color: red;
   min-height: 80vh;
-  text-align: center; }
+  text-align: center;
+  color: #5a5a5a; }
   #contact-me p {
     margin: 15px 0; }
   #contact-me .details {
@@ -379,11 +382,12 @@ h1, h2, h3, h4, h5, h6 {
   #contact-me .info {
     height: 80vh;
     font-size: 1.5em;
-    padding: 5% 10px 10px 10px; }
+    padding: 5% 10px 10px 10px;
+    line-height: 2.2em; }
     #contact-me .info p {
-      text-align: left;
+      text-align: justify;
       margin: 0 auto;
-      max-width: 500px; }
+      max-width: 550px; }
 
 iframe {
   height: 100vh;

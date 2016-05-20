@@ -458,6 +458,9 @@ h1,h2,h3,h4,h5,h6 {
 		margin: 2px 4px;
 		display: inline-block;
 	}
+	.row {
+		margin-bottom:40px;
+	}
 }
 
 
@@ -480,6 +483,7 @@ h1,h2,h3,h4,h5,h6 {
 	color: red;
 	min-height: 80vh;
 	text-align: center;
+	color: darken(gray, 15%);
 	p{
 		margin:15px 0;
 	}
@@ -496,10 +500,11 @@ h1,h2,h3,h4,h5,h6 {
 		height:80vh;
 		font-size: 1.5em;
 		padding: 5% 10px 10px 10px;
+		line-height:2.2em;
 		p {
-			text-align: left;
+			text-align: justify;
 			margin: 0 auto;
-			max-width: 500px;
+			max-width: 550px;
 		}
 
 	}
