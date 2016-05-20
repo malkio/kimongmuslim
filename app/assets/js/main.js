@@ -96,10 +96,10 @@
 		var backgroundData = data.background;
 		var $background = $("#simple-background");
 		$.each(backgroundData.categories, function(catIndex, category){
-			var $categories = $("<div class='row'><div class='col-sm-4'><h4>"+category.name+"</h4></div><div class='col-sm-8 background-list'></div></div>");
+			var $categories = $("<div class='row'><div class='col-sm-3'><h4>"+category.name+"</h4></div><div class='col-sm-9 background-list'></div></div>");
 
 			$.each(category.list, function(backgroundIndex, background){
-				var backgroundSpan = "<span class='label label-primary'>"+background+"</span>";
+				var backgroundSpan = "<span class='label label-default'>"+background+"</span>";
 				$categories.find('.background-list').append(backgroundSpan);
 			});
 			$background.find('.container').append($categories);

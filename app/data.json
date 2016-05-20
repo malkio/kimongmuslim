@@ -174,21 +174,97 @@
 	"background": {
 		"categories": [
 			{
-				"name" :"frontend",
+				"name" :"Languages",
 				"list": [
-					"coffeescript",
-					"babel",
-					"jquery"
+					"javascript",
+					"java (android)",
+					"php",
+					"ruby"
 				]
 			},
 			{
-				"name" :"backend",
+				"name" :"Databases",
 				"list": [
-					"php",
+					"mysql",
+					"mongodb",
+					"sqlite (ANDROID)",
+					"backendless (BAAS)",
+					"parse (BAAS)"
+				]
+			},
+			{
+				"name" :"Preprocessors",
+				"list": [
+					"sass (CSS)",
+					"less (CSS)",
+					"babel (JAVASCRIPT)",
+					"coffeescript (JAVASCRIPT)"
+				]
+			},
+			{
+				"name" :"Tools",
+				"list": [
+					"git",
+					"parse cloudcode",
+					"terminal (Unix)",
+					"grunt",
+					"yoeman",
+					"jekyll",
+					"bower"
+				]
+			},
+			{
+				"name" :"Others",
+				"list": [
+					"jquery",
+					"bootstrap",
 					"phalcon",
-					"codeigniter"
+					"codeigniter",
+					"underscore",
+					"backbone",
+					"nodejs",
+
+					"bower",
+					"homebrew",
+
+					"jade test",
+					"linters",
+
+					"heroku",
+					"rackspace",
+					"fortrabbit",
+					"digitalocean",
+					"mongolabs",
+
+					"git-pages",
+					"magento",
+					"wordpress",
+					"google maps android",
+					"google maps javascript",
+					"google maps geocoding",
+					"google places",
+
+					"youtube api",
+					"nodewebkit",
+					"twitch api",
+					"openweather api",
+
+					"ajax",
+					"json",
+					"markdown",
+					"regedit",
+
+					"solid",
+					"oop",
+					"mvc",
+					"mvvm",
+					"prototypal javascript",
+					"factory javascript"
+
+
 				]
 			}
+
 		]
 	}
 }

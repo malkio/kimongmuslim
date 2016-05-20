@@ -9,6 +9,8 @@ Base styles: opinionated defaults
 ========================================================================== */
 
 html {
+    max-width: 100%;
+    overflow-x: hidden;
 	color: #222;
 	font-size: 1em;
 	line-height: 1.4;
@@ -386,6 +388,10 @@ section {
 	.container > .row {
 		position:relative;
 	}
+
+	&.section-half {
+		min-height: 50vh;
+	}
 }
 .overlay {
 	position: absolute;
@@ -426,7 +432,7 @@ h1,h2,h3,h4,h5,h6 {
 			text-align: center;
 			color: red;
 			background-color: rgba(#fff, 0.90);
-			border-right: 5px solid darken(#fff, 15%);
+			border-right: 4px solid darken(#fff, 15%);
 		}
 	}
 	.work-item {
@@ -449,7 +455,8 @@ h1,h2,h3,h4,h5,h6 {
 
 #simple-background {
 	span {
-		margin: 0 5px;
+		margin: 2px 4px;
+		display: inline-block;
 	}
 }
 
@@ -468,27 +475,24 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #contact-me {
-	//background-color:darken(#fff, 4%); 
 	padding: 0;
 	background-color: darken(#fff, 2%);
 	color: red;
+	min-height: 80vh;
 	p{
 		margin:15px 0;
 	}
-	.container, .row {
-		height: 100%;
-	}
 	.details {
-		height:100vh;
-		padding: 10px;
+		height:80vh;
+		padding: 5% 0 10px 0;
 		//@include linear-gradient(to bottom, darken(red, 5%) 30%, darkred 80%, darken(red, 40%) 100%);
 		background-color: #fff;
 		text-align: center;
-		img { margin: 0 auto; max-height: 200px; max-width:200px; }
+		img { margin: 0 auto; padding: 0 20px;}
 	}
 	.info {
-		height:100vh;
-		padding: 10px;
+		height:80vh;
+		padding: 5% 10px 10px 10px;
 
 	}
 }

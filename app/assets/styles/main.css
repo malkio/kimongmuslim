@@ -7,6 +7,8 @@
 Base styles: opinionated defaults
 ========================================================================== */
 html {
+  max-width: 100%;
+  overflow-x: hidden;
   color: #222;
   font-size: 1em;
   line-height: 1.4; }
@@ -291,6 +293,8 @@ section {
   padding: 8px 0 5% 0; }
   section .container > .row {
     position: relative; }
+  section.section-half {
+    min-height: 50vh; }
 
 .overlay {
   position: absolute;
@@ -324,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: red;
     background-color: rgba(255, 255, 255, 0.9);
-    border-right: 5px solid #d9d9d9; }
+    border-right: 4px solid #d9d9d9; }
   #works .work-item:hover .overlay {
     color: red;
     background-color: rgba(255, 255, 255, 0.95); }
@@ -339,7 +343,8 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 2.2em; }
 
 #simple-background span {
-  margin: 0 5px; }
+  margin: 2px 4px;
+  display: inline-block; }
 
 #coggle-background {
   position: relative; }
@@ -356,23 +361,21 @@ h1, h2, h3, h4, h5, h6 {
 #contact-me {
   padding: 0;
   background-color: #fafafa;
-  color: red; }
+  color: red;
+  min-height: 80vh; }
   #contact-me p {
     margin: 15px 0; }
-  #contact-me .container, #contact-me .row {
-    height: 100%; }
   #contact-me .details {
-    height: 100vh;
-    padding: 10px;
+    height: 80vh;
+    padding: 5% 0 10px 0;
     background-color: #fff;
     text-align: center; }
     #contact-me .details img {
       margin: 0 auto;
-      max-height: 200px;
-      max-width: 200px; }
+      padding: 0 20px; }
   #contact-me .info {
-    height: 100vh;
-    padding: 10px; }
+    height: 80vh;
+    padding: 5% 10px 10px 10px; }
 
 iframe {
   height: 100vh;
