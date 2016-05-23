@@ -7,15 +7,18 @@
   ],
   "license": "ISC",
   "keywords": [
-      "bootstrap",
-      "template",
-      "responsive",
-      "website"
+    "bootstrap",
+    "template",
+    "responsive",
+    "website"
   ],
   "moduleType": [],
   "homepage": "",
   "private": true,
   "devDependencies": {
     "bootstrap-sass": "^3.3.6"
+  },
+  "dependencies": {
+    "gsap": "^1.18.4"
   }
 }
