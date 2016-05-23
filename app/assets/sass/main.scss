@@ -412,6 +412,35 @@ a {
 		color: lighten(#384452,20%);
 	}
 }
+
+
+#landing{
+  background: linear-gradient(135deg, red,darkred);
+  padding: 0;
+  min-height:inherit;
+position:relative;
+box-sizing: border-box;
+	h1 {
+		position:absolute;
+		font-size:3em;
+		top:40%;
+		width:100%;
+		text-align:center;
+		color: #fff;
+		left:0%;
+	}
+}
+
+#canvas {
+  position: relative;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow:hidden;
+}
 #works {
 	padding-top: 70px;
 
