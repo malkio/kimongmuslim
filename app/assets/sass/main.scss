@@ -1,3 +1,8 @@
+
+$maincolor1: darken(#fff, 0%);
+
+
+
 /*
 * What follows is the result of much research on cross-browser styling.
 * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -94,12 +99,12 @@ Author's custom styles
 
 .navbar-inverse {
 	//background-color: red;
-	background-color: rgba(255,0,0, 0.9);
+	background-color: rgba(220,0,0, 0.9);
 	border:none;
 	color: #fff;
 
 	.navbar-brand {
-		background-color: #fff;
+		background-color: $maincolor1;
 		color: red;
 		-webkit-webkit-transition: background-color 0.5s ease;
 		-moz-webkit-transition: background-color 0.5s ease;
@@ -340,7 +345,6 @@ http://www.phpied.com/delay-loading-your-print-css/
 	background: linear-gradient($direction, $color-stops);
 }
 
-
 .no-gutter > [class*='col-'] {
 	padding-right:0;
 	padding-left:0;
@@ -360,14 +364,21 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'edge';
 }
 
+body {
+	background-color: $maincolor1;
+}
+
 span.label-default {
-	background-color: lighten(#384452, 20%);
+	background-color: $maincolor1;
 }
 
 a {
 	color: #384452;
-	&:hover {
+	&:hover,
+	&:focus {
 		color: lighten(#384452,20%);
+		outline:none;
+		text-decoration: none;
 	}
 }
 
@@ -395,7 +406,7 @@ section {
 }
 
 .section-bar {
-	background-color:darken(#fff, 4%);
+	background-color:darken($maincolor1, 5%);
 	margin-bottom: 2px;
 	font-family: 'edge';
 	.section-title {
@@ -406,13 +417,12 @@ section {
 		min-width:200px;
 		border-right: 5px solid darkred;
 		display:inline-block;
-		background-color: red;
+		background-color: rgb(220, 0,0);
 		.title {
 			height: 100%;
 			padding-left:10px;
-			border-left: #fff;
 			color: #fff;
-			border-left: 10px solid #fff;
+			//border-left: 10px solid #fff;
 			font-weight:bolder;
 			small {
 				font-size: .7em;
@@ -443,14 +453,18 @@ section {
 	min-height:inherit;
 	position:relative;
 	box-sizing: border-box;
-	h1 {
+	>div {
 		position:absolute;
-		font-size:3em;
 		top:40%;
 		width:100%;
-		text-align:center;
-		color: #fff;
 		left:0%;
+		h1 {
+			background-color: darken(darkred, 10% );
+			padding: 5px 10px;
+			display:inline;
+			font-size:3em;
+			color: #fff;
+		}
 	}
 }
 
@@ -481,8 +495,8 @@ section {
 
 	.work-header {
 		&:hover .overlay{
-			background-color: rgba(255,255,255, 0.80);
-			border-color: red;
+			background-color: rgba(255,255,255, 0.95);
+		//	border-color: red;
 		}
 		.overlay {
 			text-align: center;
@@ -535,7 +549,7 @@ section {
 
 #contact-me {
 	padding: 0;
-	background-color: darken(#fff, 2%);
+	background-color:darken($maincolor1, 8%);
 	color: red;
 	min-height: 80vh;
 	text-align: center;
@@ -547,10 +561,15 @@ section {
 		height:80vh;
 		padding: 5% 10px 10px 10px;
 		//@include linear-gradient(to bottom, darken(red, 5%) 30%, darkred 80%, darken(red, 40%) 100%);
-		background-color: #fff;
+		background-color: $maincolor1;
 		text-align: center;
 		h3{ font-family: 'Arial'; }
-		img { margin: 0 auto; padding: 0 10%; max-height: 300px; }
+		img { margin: 0 auto; padding-top: -10px; }
+		.image-container {
+			padding: 0 10%;
+			max-height:300px;
+			overflow: hidden;
+		}
 	}
 	.info {
 		height:80vh;

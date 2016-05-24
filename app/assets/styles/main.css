@@ -78,11 +78,11 @@ Browser Upgrade Prompt
 Author's custom styles
 ========================================================================== */
 .navbar-inverse {
-  background-color: rgba(255, 0, 0, 0.9);
+  background-color: rgba(220, 0, 0, 0.9);
   border: none;
   color: #fff; }
   .navbar-inverse .navbar-brand {
-    background-color: #fff;
+    background-color: white;
     color: red;
     -webkit-webkit-transition: background-color 0.5s ease;
     -moz-webkit-transition: background-color 0.5s ease;
@@ -267,13 +267,18 @@ http://www.sanbeiji.com/archives/953 */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'edge'; }
 
+body {
+  background-color: white; }
+
 span.label-default {
-  background-color: #61768f; }
+  background-color: white; }
 
 a {
   color: #384452; }
-  a:hover {
-    color: #61768f; }
+  a:hover, a:focus {
+    color: #61768f;
+    outline: none;
+    text-decoration: none; }
 
 iframe {
   height: 100vh;
@@ -293,7 +298,7 @@ section {
     min-height: 50vh; }
 
 .section-bar {
-  background-color: whitesmoke;
+  background-color: #f2f2f2;
   margin-bottom: 2px;
   font-family: 'edge'; }
   .section-bar .section-title {
@@ -304,13 +309,11 @@ section {
     min-width: 200px;
     border-right: 5px solid darkred;
     display: inline-block;
-    background-color: red; }
+    background-color: #dc0000; }
     .section-bar .section-title .title {
       height: 100%;
       padding-left: 10px;
-      border-left: #fff;
       color: #fff;
-      border-left: 10px solid #fff;
       font-weight: bolder; }
       .section-bar .section-title .title small {
         font-size: .7em; }
@@ -335,14 +338,17 @@ section {
   min-height: inherit;
   position: relative;
   box-sizing: border-box; }
-  #landing h1 {
+  #landing > div {
     position: absolute;
-    font-size: 3em;
     top: 40%;
     width: 100%;
-    text-align: center;
-    color: #fff;
     left: 0%; }
+    #landing > div h1 {
+      background-color: #580000;
+      padding: 5px 10px;
+      display: inline;
+      font-size: 3em;
+      color: #fff; }
 
 #canvas {
   position: relative;
@@ -365,8 +371,7 @@ section {
     box-sizing: border-box;
     position: relative; }
   #works .work-header:hover .overlay {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-color: red; }
+    background-color: rgba(255, 255, 255, 0.95); }
   #works .work-header .overlay {
     text-align: center;
     color: #425161;
@@ -405,7 +410,7 @@ section {
 
 #contact-me {
   padding: 0;
-  background-color: #fafafa;
+  background-color: #ebebeb;
   color: red;
   min-height: 80vh;
   text-align: center;
@@ -415,14 +420,17 @@ section {
   #contact-me .details {
     height: 80vh;
     padding: 5% 10px 10px 10px;
-    background-color: #fff;
+    background-color: white;
     text-align: center; }
     #contact-me .details h3 {
       font-family: 'Arial'; }
     #contact-me .details img {
       margin: 0 auto;
+      padding-top: -10px; }
+    #contact-me .details .image-container {
       padding: 0 10%;
-      max-height: 300px; }
+      max-height: 300px;
+      overflow: hidden; }
   #contact-me .info {
     height: 80vh;
     font-size: 1.3em;

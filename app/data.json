@@ -160,10 +160,11 @@
 					"oop",
 					"mvc",
 					"mvvm",
-					"prototypal javascript",
-					"factory javascript"
-
-
+					"constructor pattern",
+					"modular pattern",
+					"observer pattern",
+					"factory pattern",
+					"revealing module" 
 				]
 			}
 
