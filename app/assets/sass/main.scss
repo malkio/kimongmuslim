@@ -93,7 +93,8 @@ Author's custom styles
 ========================================================================== */
 
 .navbar-inverse {
-	background-color: red;
+	//background-color: red;
+	background-color: rgba(255,0,0, 0.9);
 	border:none;
 	color: #fff;
 
@@ -321,13 +322,6 @@ http://www.phpied.com/delay-loading-your-print-css/
 	src: url(../fonts/good_times/good_times.ttf);
 }
 
-.row-eq-height {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display:         flex;
-}
-
 @function is-direction($value) {
 	$is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
 	$is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
@@ -345,12 +339,59 @@ http://www.phpied.com/delay-loading-your-print-css/
 	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
 	background: linear-gradient($direction, $color-stops);
 }
-.navbar-brand {
-	font-family: 'edge';
-}
+
+
 .no-gutter > [class*='col-'] {
 	padding-right:0;
 	padding-left:0;
+}
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+}
+
+.navbar-brand {
+	font-family: 'edge';
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'edge';
+}
+
+span.label-default {
+	background-color: lighten(#384452, 20%);
+}
+
+a {
+	color: #384452;
+	&:hover {
+		color: lighten(#384452,20%);
+	}
+}
+
+iframe {
+	height: 100vh;
+	width: 100%;
+	z-index: 5;
+}
+
+span.label-default {
+	background-color: lighten(#384452, 5%);
+}
+
+section {
+	min-height: 100vh;
+	margin: 0;
+	padding: 8px 0 5% 0;
+	.container > .row {
+		position:relative;
+	}
+
+	&.section-half {
+		min-height: 50vh;
+	}
 }
 
 .section-bar {
@@ -380,18 +421,6 @@ http://www.phpied.com/delay-loading-your-print-css/
 	}
 }
 
-section {
-	min-height: 100vh;
-	margin: 0;
-	padding: 8px 0 5% 0;
-	.container > .row {
-		position:relative;
-	}
-
-	&.section-half {
-		min-height: 50vh;
-	}
-}
 .overlay {
 	position: absolute;
 	top: 0;
@@ -403,16 +432,10 @@ section {
 	-o-transition: background-color 0.5s ease;
 	transition: background-color 0.5s ease;
 }
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'edge';
-}
-a {
-	color: #384452;
-	&:hover {
-		color: lighten(#384452,20%);
-	}
-}
 
+.btn-toggle-coggle {
+	height: 50px;
+}
 
 #landing{
 	background: linear-gradient(165deg, red,darkred);
@@ -433,7 +456,6 @@ a {
 
 #canvas {
 	position: relative;
-
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -545,23 +567,32 @@ a {
 	}
 }
 
-iframe {
-	height: 100vh;
-	width: 100%;
-	z-index: 5;
-}
-.btn-toggle-coggle {
-	height: 50px;
+footer {
+	padding: 60px 0 80px 0;
+	background-color: lighten(#384452, 0%);
+	color: #fff;
+	ul {
+		text-decoration: none;
+		list-style: none;
+		li {
+			margin: 15px 0;
+		}
+	}
+	a {
+
+		color: darken(#fff, 15%);
+		&:hover {
+			color: darken(#fff, 2%);
+			text-decoration: none;
+		}
+		&:focus {
+			outline: none;
+			text-decoration: none;
+		}
+
+	}
 }
 
-footer{
-	padding: 60px 0;
-	background-color: lighten(#384452, 20%);
-	color: #fff;
-}
-span.label-default {
-	background-color: lighten(#384452, 20%);
-}
 // old devices
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 	.fullheight {

@@ -78,7 +78,7 @@ Browser Upgrade Prompt
 Author's custom styles
 ========================================================================== */
 .navbar-inverse {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.9);
   border: none;
   color: #fff; }
   .navbar-inverse .navbar-brand {
@@ -251,6 +251,10 @@ http://www.sanbeiji.com/archives/953 */
 @font-face {
   font-family: edge;
   src: url(../fonts/good_times/good_times.ttf); }
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
 .row-eq-height {
   display: -webkit-box;
   display: -webkit-flex;
@@ -260,9 +264,33 @@ http://www.sanbeiji.com/archives/953 */
 .navbar-brand {
   font-family: 'edge'; }
 
-.no-gutter > [class*='col-'] {
-  padding-right: 0;
-  padding-left: 0; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'edge'; }
+
+span.label-default {
+  background-color: #61768f; }
+
+a {
+  color: #384452; }
+  a:hover {
+    color: #61768f; }
+
+iframe {
+  height: 100vh;
+  width: 100%;
+  z-index: 5; }
+
+span.label-default {
+  background-color: #425161; }
+
+section {
+  min-height: 100vh;
+  margin: 0;
+  padding: 8px 0 5% 0; }
+  section .container > .row {
+    position: relative; }
+  section.section-half {
+    min-height: 50vh; }
 
 .section-bar {
   background-color: whitesmoke;
@@ -287,15 +315,6 @@ http://www.sanbeiji.com/archives/953 */
       .section-bar .section-title .title small {
         font-size: .7em; }
 
-section {
-  min-height: 100vh;
-  margin: 0;
-  padding: 8px 0 5% 0; }
-  section .container > .row {
-    position: relative; }
-  section.section-half {
-    min-height: 50vh; }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -307,13 +326,8 @@ section {
   -o-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'edge'; }
-
-a {
-  color: #384452; }
-  a:hover {
-    color: #61768f; }
+.btn-toggle-coggle {
+  height: 50px; }
 
 #landing {
   background: linear-gradient(165deg, red, darkred);
@@ -420,21 +434,23 @@ a {
       margin: 0 auto;
       max-width: 550px; }
 
-iframe {
-  height: 100vh;
-  width: 100%;
-  z-index: 5; }
-
-.btn-toggle-coggle {
-  height: 50px; }
-
 footer {
-  padding: 60px 0;
-  background-color: #61768f;
+  padding: 60px 0 80px 0;
+  background-color: #384452;
   color: #fff; }
-
-span.label-default {
-  background-color: #61768f; }
+  footer ul {
+    text-decoration: none;
+    list-style: none; }
+    footer ul li {
+      margin: 15px 0; }
+  footer a {
+    color: #d9d9d9; }
+    footer a:hover {
+      color: #fafafa;
+      text-decoration: none; }
+    footer a:focus {
+      outline: none;
+      text-decoration: none; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .fullheight {
